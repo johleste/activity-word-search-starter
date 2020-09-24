@@ -8,8 +8,13 @@
 // TODO 1: Use querySelector to assign EACH of the above 
 // elements to a variable, just like this:
 let searchButton = document.querySelector('#search-button')
+let textBox = document.querySelector('#textbox')
+let sentence = document.querySelector("#sentence")
+let searchResults = document.querySelector("#search-results")
 
 searchButton.addEventListener('click', function () {
+  textBox.value
+  sentence.innerText
  
   // TODO 2: Write an IF statement which determines whether
   // the user-supplied string from #textbox is included in
@@ -32,6 +37,19 @@ searchButton.addEventListener('click', function () {
   // with a success message (such as, "A match was found!"),
   // otherwise update it with a failure message (such as, 
   // "No results. Too bad!")
+  
+  if (textBox.value.includes(sentence.innerHTML)){
+    console.log ("word found")
+    searchResults.innerText='Success'
+
+
+
+
+
+  }else{
+console.log ("no match")
+searchResults.innerHTML='failure'
+  }
 
 })
 
